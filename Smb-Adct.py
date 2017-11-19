@@ -36,21 +36,21 @@ of typing the same commands all over again.
 
 print ("Hedaco's SAMBA TOOL")
 print ("\n")
-print ("\nIP smb:"),
+print ("\nSmb IP Addr:"),
 ip = raw_input()
 print ("\n")
-print ("\nUsar proxychains? (Y/N):"),
+print ("\nUse proxychains? (Y/N):"),
 pchains = raw_input()
 
 if pchains == 'Y' or pchains =='y':
 	print ("\n")
-	print ("Listando pastas...")
+	print ("Listing folders...")
 	print ("\n")
 	os.system("proxychains smbclient -L " + ip + " -N")
 	print ("\n ")
 elif pchains == 'N' or pchains == 'n':
 	print ("\n")
-	print ("Listando pastas...")
+	print ("Listing folders...")
 	print ("\n ")
 	os.system("smbclient -L " + ip + " -N")
 	print ("\n ")
@@ -61,12 +61,12 @@ print ("\n ")
 
 if pchains == 'Y' or pchains =='y':
 	print ("\n")	
-	print ("\nPasta ") + sn
+	print ("\nFolder ") + sn
 	os.system("proxychains smbclient //" + ip + "/" + sn +" -N")
 	print ("\n")
 elif pchains == 'N' or pchains == 'n':
 	print ("\n ")
-	print ("\nPasta >") + sn
+	print ("\nFolder >") + sn
 	print ("\n ")
 	os.system("smbclient //" + ip + "/" + sn +" -N")
 	print ("\n ")
