@@ -1,4 +1,4 @@
-# SMBADCT
+# SMB ADCT
 Samba Server Automatic Discovery and Connection Tool.
 -----------------------------------------------------
 The purpose of this tool is facilitate the connection with Samba Servers, without the need of retyping commands over and over again.
